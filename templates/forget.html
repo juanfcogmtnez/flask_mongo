@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Login System{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row vh-100 justify-content-center align-items-center">
+<form action="" method="post">
+  <div class="form-group">
+		{% if message  %}
+    <label role="alert">
+        <p style="color:Red">{{ message }}</p>
+    </label>
+		{% endif %}
+		<div class="form-group">
+		<img src="static/img/simalga.png" class="img-thumbnail" alt="Simalga" width="304" height="236"> 
+		</div>
+      <label for="InputEmail">Introduce tu email</label>
+      <input name="email" class="form-control" id="InputEmail"  placeholder="Enter email">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+
+</div>
+{% endblock %}

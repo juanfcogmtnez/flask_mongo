@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Reset password{% endblock %}
+
+{% block content %}
+<script>
+	function redirect(){
+		setTimeout(function(){window.location.href ='../login';}, 5000);
+	}
+{{script}}
+</script>
+<div class="container">
+	<div class="row vh-100 justify-content-center align-items-center">
+<form action="" method="post">
+	<div class="form-group">
+	{% if message  %}
+    <label role="alert">
+        <p style="color:red">{{ message }}</p>
+    </label>
+{% endif %}
+	</div>
+	<div class="form-group">
+		<img src="../static/img/simalga.png" class="img-thumbnail" alt="Simalga" width="304" height="236"> 
+		</div>
+  <div class="form-group">
+    <input type="hidden" name="email" class="form-control" id="Inputemail" value="{{email}}">
+  </div>
+  <div class="form-group">
+    <label for="InputPassword">Password</label>
+    <input type="password" name="password1" class="form-control" id="InputPassword" placeholder="Password">
+  </div>
+
+    <div class="form-group">
+    <label for="InputPassword2">Repeat Password</label>
+    <input type="password" name="password2" class="form-control" id="InputPassword2" placeholder="Repeat Password">
+
+    </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+</form>
+</div>
+</div>
+{% endblock %}
